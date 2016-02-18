@@ -10,17 +10,16 @@ ENV vso_agentpool=default
 ENV vso_service_username=vsoservice
 ENV vso_service_password=vsoservice
 
-
-RUN sudo apt-get update
+RUN apt-get update
 
 # INSTALL Expect
-RUN sudo apt-get install expect -y
+RUN apt-get install expect -y
 
 # INSTALL GIT
-RUN sudo apt-get install nodejs-legacy -y
+RUN apt-get install nodejs-legacy -y
 
 # INSTALL VSO Agent
-RUN sudo npm install vsoagent-installer bower gulp -g
+RUN npm install vsoagent-installer bower gulp -g
 
 #CREATE SOME dirs
 RUN mkdir opt/buildagent
