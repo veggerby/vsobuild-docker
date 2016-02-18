@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM node
 MAINTAINER name <email@domain.com>
 
 #env variables
@@ -17,14 +17,10 @@ RUN sudo apt-get update
 RUN sudo apt-get install expect -y
 
 # INSTALL GIT
-RUN sudo apt-get install git -y
-
-# INSTALL NODE
-RUN sudo apt-get install nodejs npm -y
 RUN sudo apt-get install nodejs-legacy -y
 
 # INSTALL VSO Agent
-RUN sudo npm install vsoagent-installer -g
+RUN sudo npm install vsoagent-installer bower gulp -g
 
 #CREATE SOME dirs
 RUN mkdir opt/buildagent
