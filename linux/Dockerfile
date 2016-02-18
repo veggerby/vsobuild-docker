@@ -28,8 +28,6 @@ RUN mkdir opt/buildagent/_work
 #COPY expect file
 WORKDIR /opt/buildagent
 COPY ConfigureAgent.expect ConfigureAgent.expect
-COPY run.sh run.sh
-RUN chmod +x run.sh 
 
 #  Create a service user 
 RUN echo "${vso_service_username}\n${vso_service_password}\n\n\n\n\n\n\n" | adduser ${vso_service_username}
@@ -42,4 +40,6 @@ WORKDIR /opt/buildagent/agent
 RUN chown -R ${vso_service_username} /opt/buildagent
 
 WORKDIR /opt/buildagent
-CMD ./run.sh
+
+USER ${vso_service_username}
+CMD expect ConfigureAgent.expect
