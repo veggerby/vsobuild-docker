@@ -2,6 +2,6 @@
 
 Docker container for VSTS Node.js build agent
 
-Based on [renevanosnabrugge/vsobuild-docker](https://github.com/renevanosnabrugge/vsobuild-docker)
+Docker Hub Repository: [veggerby/vsoagent](https://hub.docker.com/r/veggerby/vsoagent/)
 
-[![Build Status](https://travis-ci.org/veggerby/vsobuild-docker.svg?branch=master)](https://travis-ci.org/veggerby/vsobuild-docker)
+Based on [renevanosnabrugge/vsobuild-docker](https://github.com/renevanosnabrugge/vsobuild-docker)
