@@ -1,6 +1,6 @@
 # vsobuild-docker
 
-Docker container fdor VSTS Node.js build agent
+Docker container for VSTS Node.js build agent
 
 Based on [renevanosnabrugge/vsobuild-docker](https://github.com/renevanosnabrugge/vsobuild-docker)
 
